@@ -1,4 +1,3 @@
-import Mail from '../lib/Mail';
 import Queue from '../lib/Queue'
 
 export default {
@@ -13,8 +12,7 @@ export default {
         };
 
         //Adicionando job que enviara o email há uma fila
-        await Queue.add({ user });
-        //Isso adiciona há filá mas não estamos processando de fato essa fila
+        await Queue.add('RegistrationMail', { user });
 
         return res.json(user);
     }

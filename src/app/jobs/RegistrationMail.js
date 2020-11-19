@@ -1,4 +1,4 @@
-import mail from '../lib/Mail';
+import Mail from '../lib/Mail';
 
 //Enviando um email
 
